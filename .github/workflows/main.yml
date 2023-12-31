@@ -2,7 +2,7 @@ name: Build & Deploy to Github Pages
 
 on:
   push:
-    branches: [master, main]
+    branches: [main]
 
 # Before using this action
 # 1. Create a `gh-pages` branch
