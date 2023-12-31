@@ -1,6 +1,5 @@
 {
   "name": "relatedwork_repo-main",
-  "homepage": "zyyan20h.github.io/relatedWork_repo",
   "version": "1.0.0",
   "description": "Please follows [this wiki page](https://wikis.mit.edu/confluence/display/hcie/FABPUB%3A+Lists+of+Publication+on+Fabrication) for the updating instruction.",
   "main": "index.js",
