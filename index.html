@@ -1,567 +1,320 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="">
-	<meta name="author" content="">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Get Google Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400' rel='stylesheet' type='text/css'>
 
-	<!-- Get Google Fonts -->
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400' rel='stylesheet' type='text/css'>
+  <title>Sustainable Making Publication Repository</title>
 
-	<title>Sustainable Making Publication Repository</title>
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 
-	<!-- Bootstrap Core CSS -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/reset.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8" />
+  <link href="css/index.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8" />
 
-	<!-- Custom CSS -->
-	<link rel="shortcut icon" href="icon/csail.ico" type="image/x-icon" />
-	<link href="css/reset.css" rel="stylesheet" />
-	<link href="css/index.css" rel="stylesheet">
+  <!-- TODO: Add your spreadsheet RSS feed URL and uncomment the following lines -->
+  <!-- <link rel="alternate" type="application/rss+xml" title="TITLE" href="" /> -->
 
-	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
+  <!-- Custom JS file -->
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript" src="underscore-min.js"></script>
+  <script type="text/javascript" src="gooss.js"></script>
 
-	<!-- Custom JS file -->
-	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-	<script type="text/javascript" src="/js/underscore.js"></script>
-	<script type="text/javascript" src="/js/gooss.js"></script>
-	<script type="text/javascript" src="/js/readGoogleSheet.js"></script>
+  <script type="text/javascript">
+    // TODO: Change this to the URL of your spreadsheet.
+    var url = "https://docs.google.com/spreadsheets/d/1yaZWr2U66JCPy5NssvbX-qGEgytAyVl8ftS4V2UGxPs/edit?usp=sharing";
+
+    // DOMContentLoaded is not available IE < 9. Use a different load method
+    // if you wish to target lower IE versions.
+    document.addEventListener("DOMContentLoaded", function () {
+      // TODO: Change "sheet_name" to the name you want to use
+      gooss.data({ id: { url: url, index: 0 } }, function (err, data) {
+        if (err) {
+          document.getElementById("loading").innerHTML = "Error: " + err;
+          return;
+        }
+        gooss.template(data);
+        document.getElementById("loading").style.display = "none";
+      });
+    }, false);
+  </script>
 </head>
 
 <body>
-	<!-- Navigation -->
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="http://sustainablemaking.com/">sustainable making publication repo </a>
-			</div>
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">
-					<li>
-						<a href="#top">top</a>
-					</li>
-					<!-- <li>
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://sustainablemaking.com/">sustainable making publication repo </a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="#top">top</a>
+          </li>
+          <!-- <li>
 <a href="#search">search</a>
 </li> -->
-				</ul>
-			</div>
-			<!-- /.navbar-collapse -->
-		</div>
-		<!-- /.container -->
-	</nav>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
 
-	<!-- Page Content -->
-	<div class="container">
-		<!-- This is the section of the first paragraph on the top of the page. -->
-		<div class="row">
-			<div class="col-md-10 maintanance-desc">
-				<h2>
-					<span class="header-desc">
-						<a name="#top"></a>
-						Sustainable Making in HCI and beyond:
-						</br>
-						An Overview of Related Work
-					</span>
-				</h2>
-				</br>
-				Webpage maintained by
-				<a href="https://www.zeyuyan.com/" target="_blank" class="maintanance-desc">Zeyu Yan</a>,
-				<a href="https://jasminelu.site/" target="_blank" class="maintanance-desc">Jasmine Lu</a>,
-				<a href="hhttps://tingyucheng.com/" target="_blank" class="maintanance-desc">Tingyu Cheng</a>,
-				<a href="https://plopes.org/" target="_blank" class="maintanance-desc">Pedro Lopes</a>,
-				and
-				<a href="http://www.huaishu.me/" target="_blank" class="maintanance-desc">Huaishu Peng</a>,
-
-
-				<a href="https://smartlab.cs.umd.edu/" target="_blank" class="maintanance-desc">Small Artifacts Lab,
-					UMD</a>,
-				</br>
-				For feedback and changes, please email:
-				<a href="zeyuy@umd.edu" class="maintanance-desc">
-					zeyuy/at/umd.edu
-				</a>
-			</div>
-			<!-- <div class="col-md-2">
-				</br>
-				<img src="logo/csail.svg" width="150px">
-			</div> -->
-		</div>
-		<div class="row">
-			<div class="col-md-12">
-			</div>
-			<div class="col-md-12">
-				<span class="disclaimer">
-					The goal of this website is to provide a resource for newcomers in the field of sustainable
-					interaction design and computational fabrication so that they can quickly access recent
-					contributions made in the field.
-					This webpage is created using "Personal Fabrication Research in HCI and Graphics" as a template, we
-					appreciate HCI Lab @MIT CSAIL for opensourcing the template.
-					This webpage serves as a related work directory - the creators of this webpage do not hold the
-					rights for these works, please contact the authors directly.
-				</span>
-			</div>
-		</div>
-		<!-- This is the end of the first paragraph section. -->
-		</br>
-		<!-- This is the format of entry -->
-		<!-- <div class="row portfolio">
-			<div class="col-md-3">
-				<span class="force-to-center"></span>
-				<img class= "paperimage" src="img/Patrick_Fab2016.png" />
-			</div>
-			<div class="col-md-9">
-				<span class="papertitle">
-					Personal Fabrication
-				</span>
-				</br>
-				<span class="paperauthors">
-					Patrick Baudisch and Stefanie Mueller.
-				</span>
-				</br>
-				<a name="search"></a>
-				<span class="paperdetails">
-					In this journal paper, we survey the related work in HCI and Computer Graphics over the last five years and
-					provide a roadmap for future research. The question we try to answer is whether the technology will further
-					progress towards consumers, which would allow the technology to scale from hundreds of thousands of users to
-					hundreds of millions of users. Our analysis reveals that a transition to consumers first requires a hardware +
-					software system that embodies the skills and expert knowledge that consumers lack [...]
-				</span>
-				</br>
-				</br>
-				<a href="http://www.nowpublishers.com/article/Details/HCI-055" class="btn btn-doi" alt="doi" target="_blank">DOI</a> &nbsp; &nbsp;
-				<a href="dl/personal-fabrication.pdf" class="btn btn-pdf" alt="pdf" target="_blank" >PDF</a>
-			</div>
-		</div> -->
-		<!-- This is the enf of entry format -->
-		</br>
-
-		<div class="row">
-			<div class="col-md-12">
-				<div class="controls">
-					<span class="control-text">
-						Lookup:
-					</span>
-					<select id="Paper" data-ref="select-paper">
-						<option value="">All conferences/journals</option>
-						<option value="creativityandcognition">ACM C&C</option>
-						<option value="chi">ACM CHI</option>
-						<option value="cea">ACM CEA</option>
-						<option value="dis">ACM DIS</option>
-						<option value="sgp">ACM SGP</option>
-						<option value="sca">ACM SCA</option>
-						<option value="tei">ACM TEI</option>
-						<option value="scf">ACM SCF</option>
-						<option value="siggraph">ACM SIGGRAPH</option>
-						<option value="siggraphasia">ACM SIGGRAPH Asia</option>
-						<option value="uist">ACM UIST</option>
-						<option value="vrst">ACM VRST</option>
-						<option value="eurographics">EUROGRAPHICS</option>
-						<option value="computersandgraphics">Elsevier Computer & Graphics</option>
-						<option value="computergraphicsandapplications">IEEE Computer Graphics and Applications</option>
-						<option value="nime">NIME</option>
-						<option value="iopsci">IOP Science</option>
-						<option value="icra">IEEE ICRA</option>
-						<option value="pervasivecomputing">IEEE Pervasive Computing</option>
-						<option value="assets">ACM ASSETS</option>
-					</select>
-
-					<span class="control-text">
-						+
-					</span>
-
-					<select id="Year" data-ref="select-year">
-						<option value="">All years</option>
-						<option value="2023">2023</option>
-						<option value="2022">2022</option>
-						<option value="2021">2021</option>
-						<option value="2020">2020</option>
-						<option value="2019">2019</option>
-						<option value="2018">2018</option>
-						<option value="2017">2017</option>
-						<option value="2016">2016</option>
-						<option value="2015">2015</option>
-						<option value="2014">2014</option>
-						<option value="2013">2013</option>
-						<option value="2012">2012</option>
-						<option value="2011">2011</option>
-						<option value="2010">2010</option>
-						<option value="2009">2009</option>
-						<option value="2007">2007</option>
-						<option value="2006">2006</option>
-						<option value="2004">2004</option>
-					</select>
-					<span class="control-text">
-						or
-					</span>
-					<input type="text" class="search-box" data-ref="input-tag-search"
-						placeholder=" search by conf., year, etc. " />
-					<!--input type="button" class="btn btn-filter" data-ref="input-btn-search" value="Filter" /!-->
-
-					<button type="submit" class="btn btn-filter" data-ref="input-btn-search"><span
-							class="glyphicon glyphicon-search" aria-hidden="true"></span> Filter</button>
+  <!-- Page Content -->
+  <div class="container">
+    <!-- This is the section of the first paragraph on the top of the page. -->
+    <div class="row">
+      <div class="col-md-10 maintanance-desc">
+        <h2>
+          <span class="header-desc">
+            <a name="#top"></a>
+            Sustainable Making in HCI and beyond:
+            </br>
+            An Overview of Related Work
+          </span>
+        </h2>
+        </br>
+        Webpage maintained by
+        <a href="https://www.zeyuyan.com/" target="_blank" class="maintanance-desc">Zeyu Yan</a>,
+        <a href="https://jasminelu.site/" target="_blank" class="maintanance-desc">Jasmine Lu</a>,
+        <a href="hhttps://tingyucheng.com/" target="_blank" class="maintanance-desc">Tingyu Cheng</a>,
+        <a href="https://plopes.org/" target="_blank" class="maintanance-desc">Pedro Lopes</a>,
+        and
+        <a href="http://www.huaishu.me/" target="_blank" class="maintanance-desc">Huaishu Peng</a>,
 
 
-					<input type="button" class="btn btn-reset" data-ref="input-btn-all" value="Clear" />
-					<!-- 	<input type="button" class="btn btn-reset" data-ref="input-btn-all" value="Go to visualization" /> -->
-					<!-- <a href="fabgalaxy/" class="btn btn_visualization">Go to visualization</a> -->
-				</div>
-			</div>
-		</div>
+        <a href="https://smartlab.cs.umd.edu/" target="_blank" class="maintanance-desc">Small Artifacts Lab,
+          UMD</a>,
+        </br>
+        For feedback and changes, please email:
+        <a href="zeyuy@umd.edu" class="maintanance-desc">
+          zeyuy/at/umd.edu
+        </a>
+      </div>
+      <!-- <div class="col-md-2">
+      </br>
+      <img src="logo/csail.svg" width="150px">
+    </div> -->
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+      </div>
+      <div class="col-md-12">
+        <span class="disclaimer">
+          The goal of this website is to provide a resource for newcomers in the field of sustainable
+          interaction design and computational fabrication so that they can quickly access recent
+          contributions made in the field.
+          This webpage is created using "Personal Fabrication Research in HCI and Graphics" as a template, we
+          appreciate HCI Lab @MIT CSAIL for opensourcing the template.
+          This webpage serves as a related work directory - the creators of this webpage do not hold the
+          rights for these works, please contact the authors directly.
+        </span>
+      </div>
+    </div>
+    <!-- This is the end of the first paragraph section. -->
+    </br>
+    <!-- This is the format of entry -->
+    <!-- <div class="row portfolio">
+    <div class="col-md-3">
+      <span class="force-to-center"></span>
+      <img class= "paperimage" src="img/Patrick_Fab2016.png" />
+    </div>
+    <div class="col-md-9">
+      <span class="papertitle">
+        Personal Fabrication
+      </span>
+      </br>
+      <span class="paperauthors">
+        Patrick Baudisch and Stefanie Mueller.
+      </span>
+      </br>
+      <a name="search"></a>
+      <span class="paperdetails">
+        In this journal paper, we survey the related work in HCI and Computer Graphics over the last five years and
+        provide a roadmap for future research. The question we try to answer is whether the technology will further
+        progress towards consumers, which would allow the technology to scale from hundreds of thousands of users to
+        hundreds of millions of users. Our analysis reveals that a transition to consumers first requires a hardware +
+        software system that embodies the skills and expert knowledge that consumers lack [...]
+      </span>
+      </br>
+      </br>
+      <a href="http://www.nowpublishers.com/article/Details/HCI-055" class="btn btn-doi" alt="doi" target="_blank">DOI</a> &nbsp; &nbsp;
+      <a href="dl/personal-fabrication.pdf" class="btn btn-pdf" alt="pdf" target="_blank" >PDF</a>
+    </div>
+  </div> -->
+    <!-- This is the enf of entry format -->
+    </br>
 
-		<div class="search-included" data-ref="search-included" id="Container">
-		</br>
-<!-- ================================= One section of entry ==================================-->
-<!-- ======================================================================================== -->
-<!-- ======================================================================================== -->
-<!-- ================================= One section of entry ==================================-->
-			<script type="text/html">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="controls">
+          <span class="control-text">
+            Lookup:
+          </span>
+          <select id="Paper" data-ref="select-paper">
+            <option value="">All conferences/journals</option>
+            <option value="creativityandcognition">ACM C&C</option>
+            <option value="chi">ACM CHI</option>
+            <option value="cea">ACM CEA</option>
+            <option value="dis">ACM DIS</option>
+            <option value="sgp">ACM SGP</option>
+            <option value="sca">ACM SCA</option>
+            <option value="tei">ACM TEI</option>
+            <option value="scf">ACM SCF</option>
+            <option value="siggraph">ACM SIGGRAPH</option>
+            <option value="siggraphasia">ACM SIGGRAPH Asia</option>
+            <option value="uist">ACM UIST</option>
+            <option value="vrst">ACM VRST</option>
+            <option value="eurographics">EUROGRAPHICS</option>
+            <option value="computersandgraphics">Elsevier Computer & Graphics</option>
+            <option value="computergraphicsandapplications">IEEE Computer Graphics and Applications</option>
+            <option value="nime">NIME</option>
+            <option value="iopsci">IOP Science</option>
+            <option value="icra">IEEE ICRA</option>
+            <option value="pervasivecomputing">IEEE Pervasive Computing</option>
+            <option value="assets">ACM ASSETS</option>
+          </select>
 
+          <span class="control-text">
+            +
+          </span>
 
-				<% for (var i = 0; i < id.length; i++){ %>
-					<div class = "row portfolio <%- id[i].conference %> <%- id[i].year %>">
+          <select id="Year" data-ref="select-year">
+            <option value="">All years</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+            <option value="2015">2015</option>
+            <option value="2014">2014</option>
+            <option value="2013">2013</option>
+            <option value="2012">2012</option>
+            <option value="2011">2011</option>
+            <option value="2010">2010</option>
+            <option value="2009">2009</option>
+            <option value="2007">2007</option>
+            <option value="2006">2006</option>
+            <option value="2004">2004</option>
+          </select>
+          <span class="control-text">
+            or
+          </span>
+          <input type="text" class="search-box" data-ref="input-tag-search"
+            placeholder=" search by conf., year, etc. " />
+          <!--input type="button" class="btn btn-filter" data-ref="input-btn-search" value="Filter" /!-->
 
-						<div class="col-md-3">
-							<img class="paperimage" src="<%- id[i].image %>" />
-						</div> 
-
-						<div class="col-md-9">
-							<span class="papertitle">
-								<%- id[i].title %> (<%- id[i].conference %> <%- id[i].year %>)
-							</span>
-							</br>
-							<span class="paperauthors">
-								<%- id[i].authors %>
-							</span>
-							</br>
-							<span class="paperdetails">
-								<%- id[i].abstract %>
-							</span>
-							</br>
-							</br>
-							<a href="<%- id[i].doi %>" class="btn btn-doi" alt="doi"
-							target="_blank">DOI</a> &nbsp; &nbsp;
-							<a href="<%- id[i].pdf %>" class="btn btn-pdf" alt="pdf"
-							target="_blank">PDF</a> &nbsp; &nbsp;
-							<a href="<%- id[i].video %>" class="btn btn-vdo" alt="video"
-							target="_blank">Video</a> &nbsp; &nbsp;
-							<a href="<%- id[i].website %>"
-							class="btn btn-pages" alt="page" target="_blank">Page</a>
-						</div>
-
-					</div>
-				<% } %>
-
-
-			</script>
-<!-- =============================== One section of entry END ================================-->
-<!-- ======================================================================================== -->
-<!-- ======================================================================================== -->
-<!-- =============================== One section of entry END ================================-->
-
-
-<!-- ======================================================================================== -->
-<!-- ======================================================================================== -->
-<!-- ======================================================================================== -->
-<!-- ======================================================================================== -->
-<!-- ======================================================================================== -->
-			<div class="row portfolio uist 2023">
-				<div class="col-md-3">
-					<img class="paperimage" src="img/2023/ecoEDA.jpg" />
-				</div>
-				<div class="col-md-9">
-					<span class="papertitle">
-						ecoEDA: Recycling E-Waste During Electronics Design (ACM UIST 2023)
-					</span>
-					</br>
-					<span class="paperauthors">
-
-						Jasmine Lu, Beza Desta, K D Wu, Romain Nith, Joyce Passananti, Pedro Lopes
-
-					</span>
-					</br>
-					<span class="paperdetails">
-
-						The amount of e-waste generated by discarding devices is enormous but options for recycling
-						remain limited. However, inside a discarded device (from consumer devices to one's own
-						prototypes), an electronics designer could find dozens to thousands of reusable components,
-						including microcontrollers, sensors, voltage regulators, etc. Despite this, existing electronic
-						design tools assume users will buy all components anew. To tackle this, we propose ecoEDA, an
-						interactive tool that enables electronics designers to explore recycling electronic components
-						during the design process. We accomplish this via (1) creating suggestions to assist users in
-						identifying and designing with recycled components; and (2) maintaining a library of useful data
-						relevant to reuse (e.g., allowing users to find which devices contain which components). Through
-						example use-cases, we demonstrate how our tool can enable various pathways to recycling e-waste.
-						To evaluate it, we conducted a user study where participants used our tool to create an
-						electronic schematic with components from torn-down e-waste devices. We found that participants`
-						designs made with ecoEDA featured an average of 66% of recycled components. Last, we reflect on
-						challenges and opportunities for building software that promotes e-waste reuse.
-
-					</span>
-					</br>
-					</br>
-					<a href="https://dl.acm.org/doi/10.1145/3586183.3606745" class="btn btn-doi" alt="doi"
-						target="_blank">DOI</a> &nbsp; &nbsp;
-					<a href="https://lab.plopes.org/published/2023-UIST-ecoEDA.pdf" class="btn btn-pdf" alt="pdf"
-						target="_blank">PDF</a> &nbsp; &nbsp;
-					<a href="https://www.youtube.com/watch?v=XYMRXMVBfNg" class="btn btn-vdo" alt="video"
-						target="_blank">Video</a> &nbsp; &nbsp;
-
-					<a href="https://jasminelu.site/ecoEDA-Recycling-E-Waste-During-Electronics-Design"
-						class="btn btn-pages" alt="page" target="_blank">Page</a>
-				</div>
-			</div>
-
-			<!-- 2022 -------------------------------------------------------------------------------->
-			<div class="row portfolio 2022 all">
-				<div class="col-md-12">
-					<h1 class="page-header">
-						2022
-					</h1>
-				</div>
-			</div>
-
-
-
-
-
-			<!--  ------------------- CHI 2022----------------- -->
-			<div class="row portfolio chi 2022">
-				<div class="col-md-3">
-					<img class="paperimage" src="img/chi2022/shape-haptics.jpeg" />
-				</div>
-				<div class="col-md-9">
-					<span class="papertitle">
-						Shape-Haptics: Planar & Passive Force Feedback Mechanisms for Physical Interfaces (ACM CHI 2022)
-					</span>
-					</br>
-					<span class="paperauthors">
-
-						Clement Zheng, Zhen Zhou Yong, Hongnan Lin, HyunJoo Oh and Ching Chiuan Yen
-
-					</span>
-					</br>
-					<span class="paperdetails">
-
-						We present Shape-Haptics, an approach for designers to rapidly design and fabricate passive
-						force feedback mechanisms for physical interfaces. Such mechanisms are used in everyday
-						interfaces and tools, and they are challenging to design. Shape-Haptics abstracts and broadens
-						the haptic expression of this class of force feedback systems through 2D laser cut
-						configurations that are simple to fabricate. They leverage the properties of polyoxymethylene
-						plastic and comprise a compliant spring structure that engages with a sliding profile during
-						tangible interaction. By shaping the sliding profile, designers can easily customize the haptic
-						force feedback delivered by the mechanism. We provide a computational design sandbox to
-						facilitate designers to explore and fabricate Shape-Haptics mechanisms. We also propose a series
-						of applications that demonstrate the utility of Shape-Haptics in creating and customizing
-						haptics for different physical interfaces.
-
-					</span>
-					</br>
-					</br>
-					<a href="https://dl.acm.org/doi/abs/10.1145/3491102.3501829" class="btn btn-doi" alt="doi"
-						target="_blank">DOI</a> &nbsp; &nbsp;
-					<a href="https://dl.acm.org/doi/pdf/10.1145/3491102.3501829" class="btn btn-pdf" alt="pdf"
-						target="_blank">PDF</a> &nbsp; &nbsp;
-					<a href="https://www.youtube.com/watch?v=26Wn_0ZDIOE&ab_channel=ACMSIGCHI" class="btn btn-vdo"
-						alt="video" target="_blank">Video</a> &nbsp; &nbsp;
-
-					<a href="https://clementzheng.info/Shape-Haptics" class="btn btn-pages" alt="page"
-						target="_blank">Page</a>
-				</div>
-			</div>
-
-			<div class="row portfolio chi 2022 all">
-				<div class="col-md-3">
-					<img class="paperimage" src="img/chi2022/flex-haptics.jpeg" />
-				</div>
-				<div class="col-md-9">
-					<span class="papertitle">
-						FlexHaptics: A Design Method for Passive Haptic Inputs Using Planar Compliant Structures (ACM
-						CHI 2022)
-					</span>
-					</br>
-					<span class="paperauthors">
-
-						Hongnan Lin, Liang He, Fangli Song, Yifan Li, Tingyu Cheng, Clement Zheng, Wei Wang and HyunJoo
-						Oh
-
-					</span>
-					</br>
-					<span class="paperdetails">
-
-						This paper presents FlexHaptics, a design method for creating custom haptic input interfaces.
-						Our approach leverages planar compliant structures whose force-deformation relationship can be
-						altered by adjusting the geometries. Embedded with such structures, a FlexHaptics module exerts
-						a fine-tunable haptic effect (i.e., resistance, detent, or bounce) along a movement path (i.e.,
-						linear, rotary, or ortho-planar). These modules can work separately or combine into an interface
-						with complex movement paths and haptic effects. To enable the parametric design of FlexHaptic
-						modules, we provide a design editor that converts user-specified haptic properties into
-						underlying mechanical structures of haptic modules. We validate our approach and demonstrate the
-						potential of FlexHaptic modules through six application examples, including a slider control for
-						a painting application and a piano keyboard interface on touchscreens, a tactile low vision
-						timer, VR game controllers, and a compound input device of a joystick and a two-step button.
-
-					</span>
-					</br>
-					</br>
-					<a href="https://dl.acm.org/doi/abs/10.1145/3491102.3502113" class="btn btn-doi" alt="doi"
-						target="_blank">DOI</a> &nbsp; &nbsp;
-					<a href="https://dl.acm.org/doi/pdf/10.1145/3491102.3502113" class="btn btn-pdf" alt="pdf"
-						target="_blank">PDF</a> &nbsp; &nbsp;
-					<a href="https://www.youtube.com/watch?v=GWFYzo-zAYM" class="btn btn-vdo" alt="video"
-						target="_blank">Video</a> &nbsp; &nbsp;
-
-					<a href="https://www.codecraft.group/projects/flexhaptics" class="btn btn-pages" alt="page"
-						target="_blank">Page</a>
-				</div>
-			</div>
-
-			<div class="row portfolio chi 2022 all">
-				<div class="col-md-3">
-					<img class="paperimage" src="img/chi2022/re-comp-fig.png" />
-				</div>
-				<div class="col-md-9">
-					<span class="papertitle">
-						ReCompFig: Designing Dynamically Reconfigurable Kinematic Devices Using Compliant Mechanisms and
-						Tensioning Cables (ACM CHI 2022)
-					</span>
-					</br>
-					<span class="paperauthors">
-
-						Humphrey Yang, Tate Johnson, Ke Zhong, Dinesh Patel, Gina Olson, Carmel Majidi, Mohammad Islam
-						and Lining Yao
-
-					</span>
-					</br>
-					<span class="paperdetails">
-
-						From creating input devices to rendering tangible information, the field of HCI is interested in
-						using kinematic mechanisms to create human-computer interfaces. Yet, due to fabrication and
-						design challenges, it is often difficult to create kinematic devices that are compact and have
-						multiple reconfigurable motional degrees of freedom (DOFs) depending on the interaction
-						scenarios. In this work, we combine compliant mechanisms (CMs) with tensioning cables to create
-						dynamically reconfigurable kinematic mechanisms. The devices’ kinematics (DOFs) is enabled and
-						determined by the layout of bendable rods. The additional cables function as on-demand motion
-						constraints that can dynamically lock or unlock the mechanism's DOFs as they are tightened or
-						loosened. We provide algorithms and a design tool prototype to help users design such kinematic
-						devices. We also demonstrate various HCI use cases including a kinematic haptic display, a
-						haptic proxy, and a multimodal input device.
-
-					</span>
-					</br>
-					</br>
-					<a href="https://dl.acm.org/doi/10.1145/3491102.3502065" class="btn btn-doi" alt="doi"
-						target="_blank">DOI</a> &nbsp; &nbsp;
-					<a href="https://dl.acm.org/doi/pdf/10.1145/3491102.3502065" class="btn btn-pdf" alt="pdf"
-						target="_blank">PDF</a> &nbsp; &nbsp;
-					<a href="https://www.youtube.com/watch?v=ckhV0zJh5Qc" class="btn btn-vdo" alt="video"
-						target="_blank">Video</a> &nbsp; &nbsp;
-
-					<a href="https://www.morphingmatter.cs.cmu.edu/projects/recompfig" class="btn btn-pages" alt="page"
-						target="_blank">Page</a>
-				</div>
-			</div>
-
-			<div class="row portfolio chi 2022 all">
-				<div class="col-md-3">
-					<img class="paperimage" src="img/chi2022/hydro-mod.png" />
-				</div>
-				<div class="col-md-9">
-					<span class="papertitle">
-						HydroMod : Constructive Modules for Prototyping Hydraulic Physical Interfaces (ACM CHI 2022)
-					</span>
-					</br>
-					<span class="paperauthors">
-
-						Takafumi Morita, Yu Kuwajima, Ayato Minaminosono, Shingo Maeda and Yasuaki Kakehi
-
-					</span>
-					</br>
-					<span class="paperdetails">
-
-						In recent years, actuators that handle fluids such as gases and liquids have been attracting
-						attention for their applications in soft robots and shape-changing interfaces. In the field of
-						HCI, there have been various inflatable prototyping tools that utilize air control, however,
-						very few tools for liquid control have been developed. In this study, we propose HydroMod, new
-						constructive modules that can easily generate liquid flow and programmatically control liquid
-						flow, with the aim of lowering the barrier to entry for prototyping with liquids. HydroMod
-						consists of palm-sized small modules, which can generate liquid flow with the
-						electrohydrodynamics (EHD) phenomenon by simply connecting the modules. Moreover, users can
-						configure and control the flow path by simply recombining the modules. In this paper, we propose
-						the design of the modules, evaluate the performance of HydroMod as a fluid system, and also show
-						the possible application scenarios of fluid prototyping using this system.
-
-					</span>
-					</br>
-					</br>
-					<a href="https://dl.acm.org/doi/abs/10.1145/3491102.3502096" class="btn btn-doi" alt="doi"
-						target="_blank">DOI</a> &nbsp; &nbsp;
-					<a href="https://dl.acm.org/doi/pdf/10.1145/3491102.3502096" class="btn btn-pdf" alt="pdf"
-						target="_blank">PDF</a> &nbsp; &nbsp;
-					<a href="https://www.youtube.com/watch?v=L39n1hec_xM" class="btn btn-vdo" alt="video"
-						target="_blank">Video</a> &nbsp; &nbsp;
-
-					<a href="https://xlab.iii.u-tokyo.ac.jp/projects/hydromod/" class="btn btn-pages" alt="page"
-						target="_blank">Page</a>
-				</div>
-			</div>
+          <button type="submit" class="btn btn-filter" data-ref="input-btn-search"><span
+              class="glyphicon glyphicon-search" aria-hidden="true"></span> Filter</button>
 
 
-			<!-- 2004 -------------------------------------------------------------------------------->
-			
-<!-- ======================================================================================== -->
-<!-- ======================================================================================== -->
-<!-- ======================================================================================== -->
-<!-- ======================================================================================== -->
-<!-- ======================================================================================== -->
-	
-			<!-- end search via search-included -->
-		</div>
+          <input type="button" class="btn btn-reset" data-ref="input-btn-all" value="Clear" />
+          <!-- 	<input type="button" class="btn btn-reset" data-ref="input-btn-all" value="Go to visualization" /> -->
+          <!-- <a href="fabgalaxy/" class="btn btn_visualization">Go to visualization</a> -->
+        </div>
+      </div>
+    </div>
 
-		<hr>
-
-		<!-- Footer -->
-		<footer>
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="custom_footer" align="center">
-						<span class="copyright">
-							Since 2023 &copy; Sustainable Making Workshop Organizers.
-							<!-- This website is open source under
-	<a href="https://opensource.org/licenses/MIT" target="_blank" class="forkit">MIT licensed</a> -->
-						</span>
-						<!-- <a href="http://mit.edu/" target="_blank" ><img src="logo/mit.svg" alt="MIT" class="footer-logo" /></a>
-	<a href="http://csail.mit.edu/" target="_blank"><img src="logo/csail.svg" alt="CSAIL" class="footer-logo"/></a> -->
-					</div>
-				</div>
-			</div>
-		</footer>
-
-	</div>
-	<!-- /.container -->
+    <div class="search-included" data-ref="search-included" id="Container">
+      </br>
 
 
+      <!-- ================================= One section of entry ==================================-->
+      <!-- ======================================================================================== -->
+      <!-- ======================================================================================== -->
+      <!-- ================================= One section of entry ==================================-->
+      <div id="loading">
+        <p>Loading...</p>
+      </div>
 
-	<!-- jQuery -->
+      <!-- TODO: Replace the contents of this script tag with your template -->
+      <script type="text/html">
+    <% for (var i = 0; i < id.length; i++){ %>
+      <div class = "row portfolio <%- id[i].conference %> <%- id[i].year %>">
+
+        <div class="col-md-3">
+          <img class="paperimage" src="<%- id[i].image %>" />
+        </div> 
+
+        <div class="col-md-9">
+          <span class="papertitle">
+            <%- id[i].title %> (<%- id[i].conference %> <%- id[i].year %>)
+          </span>
+          </br>
+          <span class="paperauthors">
+            <%- id[i].authors %>
+          </span>
+          </br>
+          <span class="paperdetails">
+            <%- id[i].abstract %>
+          </span>
+          </br>
+          </br>
+          <a href="<%- id[i].doi %>" class="btn btn-doi" alt="doi"
+          target="_blank">DOI</a> &nbsp; &nbsp;
+          <a href="<%- id[i].pdf %>" class="btn btn-pdf" alt="pdf"
+          target="_blank">PDF</a> &nbsp; &nbsp;
+          <a href="<%- id[i].video %>" class="btn btn-vdo" alt="video"
+          target="_blank">Video</a> &nbsp; &nbsp;
+          <a href="<%- id[i].website %>"
+          class="btn btn-pages" alt="page" target="_blank">Page</a>
+        </div>
+
+      </div>
+    <% } %>
+  </script>
+      <!-- =============================== One section of entry END ================================-->
+      <!-- ======================================================================================== -->
+      <!-- ======================================================================================== -->
+      <!-- =============================== One section of entry END ================================-->
+
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="custom_footer" align="center">
+            <span class="copyright">
+              Since 2023 &copy; Sustainable Making Workshop Organizers.
+              <!-- This website is open source under
+<a href="https://opensource.org/licenses/MIT" target="_blank" class="forkit">MIT licensed</a> -->
+            </span>
+            <!-- <a href="http://mit.edu/" target="_blank" ><img src="logo/mit.svg" alt="MIT" class="footer-logo" /></a>
+<a href="http://csail.mit.edu/" target="_blank"><img src="logo/csail.svg" alt="CSAIL" class="footer-logo"/></a> -->
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  	<!-- jQuery -->
 	<script src="js/jquery.js"></script>
 
 	<!-- Bootstrap Core JavaScript -->
@@ -574,5 +327,4 @@
 	<!-- Analytic -->
 	<script src="js/analytics.js"></script>
 </body>
-
 </html>
