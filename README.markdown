@@ -1,4 +1,4 @@
-Bundle bundle bundle!
+
 =====================
 
 A Javascript-powered website listing all of the many indie bundles being
