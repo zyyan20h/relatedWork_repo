@@ -1,23 +1,15 @@
 
 =====================
+### Assets:
 
-A Javascript-powered website listing all of the many indie bundles being
-released.
+website is currently hosted on github pages: [current address](https://zyyan20h.github.io/relatedWork_repo/#top)
+new entries can be submitted through [this google form](https://forms.gle/zLiBXeF5D7XkV2fNA)
+the form and corresponding google sheet can be found [here](https://docs.google.com/spreadsheets/d/1yaZWr2U66JCPy5NssvbX-qGEgytAyVl8ftS4V2UGxPs/edit?usp=sharing)
 
-Uses [this Google spreadsheet](https://docs.google.com/spreadsheet/ccc?key=0Ar35F5WUAjXedDY4R0VTS05UcWhaM081eklIclN0VFE)
-and gooss.js to display all the data.
+for us the maintenance team to approve and load the enties, we need to:
 
-Uses Underscore.js and 960.gs, also both licensed under the MIT license.
-
-License
--------
-
-MIT license
-
-Copyright (c) 2011 Stuart Knightley
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+1. go to the "backend" google sheet that is acting as a database with [this link](https://docs.google.com/spreadsheets/d/1yaZWr2U66JCPy5NssvbX-qGEgytAyVl8ftS4V2UGxPs/edit?usp=sharing);
+2. go to the "response" sheet that is linked with the reponses;
+3. find entries that is not marked as approved in column L;
+4. make sure all information is filled in correct;
+5. click "manage data" (from the tool bar) --> "update web data", this will run a script that update any non-duplicate approved entries into the "webData" sheet, and will be automatically picked up by the js script running the page.
