@@ -258,14 +258,18 @@
       <% for (var i = 0; i < id.length; i++){ %>
       <div class = "row portfolio <%- id[i].conference %> <%- id[i].year %>">
 
-        <div class="col-md-3">
+        
           <% if (id[i].image !== null) { %>
-          <img class="paperimage" src="<%- id[i].image %>" />
+          <div class="col-md-3"></div>
+            <img class="paperimage" src="<%- id[i].image %>" />
+          </div> 
           <% } %>
           <% else { %>
+          <div class="col-md-3"></div>
             <img class="paperimage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/800px-Image_not_available.png" />
+          </div>
           <% } %>
-        </div> 
+        
 
         <div class="col-md-9">
           <span class="papertitle">
