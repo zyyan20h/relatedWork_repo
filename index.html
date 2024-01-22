@@ -263,7 +263,13 @@
 
         
         <div class="col-md-3">
-          <img class="paperimage" src="<%- id[i].image %>" />
+          <!-- <img class="paperimage" src="<%- id[i].image %>" /> -->
+
+          <% if (id[i].image !== null){ %>
+            <img class="paperimage" src="<%- id[i].image %>" />
+            <% } %>
+
+
         </div> 
         
 
