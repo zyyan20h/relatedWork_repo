@@ -262,16 +262,9 @@
       <div class = "row portfolio <%- id[i].conference %> <%- id[i].year %>">
 
         
-          <!-- <% if (id[i].image === null) { %> -->
-          <div class="col-md-3"></div>
-            <img class="paperimage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/800px-Image_not_available.png" />
-          </div> 
-          <!-- <% } %> -->
-          <!-- <% else { %>
-          <div class="col-md-3"></div>
-            <img class="paperimage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/800px-Image_not_available.png" />
-          </div>
-          <% } %> -->
+        <div class="col-md-3">
+          <img class="paperimage" src="<%- id[i].image %>" />
+        </div> 
         
 
         <div class="col-md-9">
