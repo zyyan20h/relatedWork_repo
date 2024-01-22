@@ -32,7 +32,7 @@
 
   <script type="text/javascript">
     // TODO: Change this to the URL of your spreadsheet.
-    var url = "https://docs.google.com/spreadsheets/d/1yaZWr2U66JCPy5NssvbX-qGEgytAyVl8ftS4V2UGxPs/edit?usp=sharing" ;
+    var url = "https://docs.google.com/spreadsheets/d/1yaZWr2U66JCPy5NssvbX-qGEgytAyVl8ftS4V2UGxPs/edit?usp=sharing";
 
     // DOMContentLoaded is not available IE < 9. Use a different load method
     // if you wish to target lower IE versions.
@@ -63,13 +63,13 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#top">Return to Top </a>
+        <a class="navbar-brand" href="http://sustainablemaking.com/">Sustainable Making Workshop </a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li>
-            <a href="https://sustainablemaking.umiacs.io/">UIST2023 Sustainable Making Workshop</a>
+            <a href="#top">top</a>
           </li>
           <!-- <li>
           <a href="#search">search</a>
@@ -89,33 +89,30 @@
         <h2>
           <span class="header-desc">
             <a name="#top"></a>
-            Sustainable Making in HCI and Beyond:
+            Sustainable Making in HCI and beyond:
             </br>
             An Overview of Related Work
           </span>
         </h2>
         </br>
-        <h3>
-          The goal of this website is to provide a resource for newcomers in the field of sustainable
-          interaction design and computational fabrication so that they can quickly access recent
-          contributions made in the field. 
-          <br>
-          Webpage maintained by
-          <a href="https://www.zeyuyan.com/" target="_blank" class="maintanance-desc">Zeyu Yan</a>,
-          <a href="https://jsli.phd/" target="_blank" class="maintanance-desc">Jiasheng Li</a>,
-          <a href="https://jasminelu.site/" target="_blank" class="maintanance-desc">Jasmine Lu</a>,
-          <a href="hhttps://tingyucheng.com/" target="_blank" class="maintanance-desc">Tingyu Cheng</a>,
-          <a href="https://plopes.org/" target="_blank" class="maintanance-desc">Pedro Lopes </a>, and
-          <a href="http://www.huaishu.me/" target="_blank" class="maintanance-desc">Huaishu Peng</a>,
-          <br>
+        Webpage maintained by
+        <a href="https://www.zeyuyan.com/" target="_blank" class="maintanance-desc">Zeyu Yan</a>,
+        <a href="https://jsli.phd/" target="_blank" class="maintanance-desc">Jiasheng Li</a>,
+        <a href="https://jasminelu.site/" target="_blank" class="maintanance-desc">Jasmine Lu</a>,
+        <a href="hhttps://tingyucheng.com/" target="_blank" class="maintanance-desc">Tingyu Cheng</a>,
+        <a href="https://plopes.org/" target="_blank" class="maintanance-desc">Pedro Lopes </a>,
+        <a href="http://www.huaishu.me/" target="_blank" class="maintanance-desc">Huaishu Peng</a>,
+        and 
+        <a href="https://smartlab.cs.umd.edu/" target="_blank" class="maintanance-desc">Small Artifacts Lab.</a>
 
-          For feedback and changes, please email:
-          <a href="zeyuy@umd.edu" class="maintanance-desc">
-            zeyuy/at/umd.edu
-          </a>
-          or submit an entry that you see missing using this
-          <a href="https://forms.gle/Qhi7X5DaNe82Dra56" target="_blank" class="maintanance-desc" style="font-weight: bolder;">Google form.</a>
-        </h3>
+        <br>
+
+        For feedback and changes, please email:
+        <a href="zeyuy@umd.edu" class="maintanance-desc">
+          zeyuy/at/umd.edu
+        </a>
+        or submit an entry that you see missing using this
+        <a herf="https://docs.google.com/forms/d/e/1FAIpQLSfAtM2FZ600rmez81ba777WUpP2bLDHneEDiJqe_94kdkfqxA/viewform" target="_blank" class="maintanance-desc">Google form.</a>
       </div>
         <div class="col-md-3">
           </br>
@@ -130,7 +127,9 @@
       <br>
       <div class="col-md-12" style = "line-height: 0.8;">
         <span class="disclaimer">
-          This webpage is created using "Personal Fabrication Research in HCI and Graphics" as a template, we
+          The goal of this website is to provide a resource for newcomers in the field of sustainable
+          interaction design and computational fabrication so that they can quickly access recent
+          contributions made in the field. This webpage is created using "Personal Fabrication Research in HCI and Graphics" as a template, we
           appreciate HCI Lab @MIT CSAIL for opensourcing the template. This webpage serves as a related work directory - the creators of this webpage do not hold the
           rights for these works, please contact the authors directly.
         </span>
@@ -260,12 +259,7 @@
       <div class = "row portfolio <%- id[i].conference %> <%- id[i].year %>">
 
         <div class="col-md-3">
-          <!-- <% if (id[i].doi !== null){ %> -->
           <img class="paperimage" src="<%- id[i].image %>" />
-          <!-- <% } %>
-          <% else { %>
-            <img class="paperimage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/800px-Image_not_available.png" />
-          <% } %> -->
         </div> 
 
         <div class="col-md-9">
