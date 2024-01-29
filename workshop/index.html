@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Future Paradigms for Sustainable Making</title>
+    <meta name="author" content="Future Paradigms for Sustainable Making">
+    <meta name="description" content="Website for the UIST 2023 workshop: Future Paradigms for Sustainable Making
+">
+    <meta name="keywords" content="sustainability, rapid prototypting, making">
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Bootstrap Table -->
+    <link defer rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.css">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%99%BB%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
+    
+    <link rel="stylesheet" href="assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e">
+    <link rel="canonical" href="http://localhost:4000/">
+
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+    <script src="assets/js/theme.js?3dd82e91913a2c1265c0f80e41ff39e2"></script>
+    <script src="assets/js/dark_mode.js?6458e63976eae16c0cbe86b97023895a"></script>
+    
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          
+          <!-- Navbar Toggle -->
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+
+              <!-- About -->
+              <li class="nav-item active">
+                <a class="nav-link" href="../index.html">return to Publication Repo<span class="sr-only">(current)</span></a>
+              </li>
+              
+
+              <!-- Other pages -->
+
+              <!-- Toogle theme mode -->
+              <li class="toggle-container">
+                <button id="light-toggle" title="Change theme">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Scrolling Progress Bar -->
+      <progress id="progress" value="0">
+        <div class="progress-container">
+          <span class="progress-bar"></span>
+        </div>
+      </progress>
+    </header>
+
+
+    <!-- Content -->
+    <div class="container mt-5">
+      
+        <!-- about.html -->
+      <div class="post">
+        <header class="post-header">
+          <h1 class="post-title">
+            <span class="font-weight-bold">Future Paradigms</span> for Sustainable Making
+          </h1>
+          <p class="desc"></p>
+        </header>
+
+        <article>
+          
+
+          <div class="clearfix">
+            <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="assets/img/header-cropped.jpg"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="assets/img/header-cropped.jpg"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="assets/img/header-cropped.jpg"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="assets/img/header-cropped.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+<p>Rapid prototyping has been a major research thrust in HCI and UIST, but the sustainability impact of rapid prototyping has not been thoroughly discussed.</p>
+
+<p>This workshop will offer the UIST community its first opportunity to discuss the sustainability challenges and the research opportunities associated with sustainable rapid prototyping. We will explore key issues such as waste generation from intermediate prototypes, strategies for using sustainable materials, and circular prototyping (e.g., promoting the reuse of components). Additionally, we’ll delve into knowledge-sharing infrastructures like open-sourcing hardware. Our objective is to pinpoint potential HCI research avenues that promote a more sustainable ‘making’ environment both inside labs and in wider contexts.</p>
+
+<p><strong>This workshop will be held on-site as part of UIST on Sunday, October 29th. To join us, register for our workshop during <a href="https://web.cvent.com/event/084853b8-9ccc-43ee-8438-78e1a744b086/summary" rel="external nofollow noopener" target="_blank">UIST registration</a>.</strong> Note: you do not need to submit any work prior to joining! Participation is open to anyone as long as they register.</p>
+
+<h2 id="background-and-goal">Background and Goal</h2>
+<p>Over the past decades, democratized fabrication and electronic toolkits have proven to be a monumental driving force for innovation. Tools like 3D printers, laser cutters, Arduino, and CircuitPython are now common in research labs and makerspaces, drastically reducing the innovation cycle. However, this ease in rapid design iteration has introduced notable sustainability challenges.</p>
+
+<p>The development of new products through rapid prototyping inevitably produces a large number of intermediate prototypes, such as 3D printed structures and custom PCBs. These intermediate prototypes are created to verify various aspects of our design but are not utilized in subsequent iterations—these one-off prototypes leave behind a significant amount of waste. Unfortunately, currently, there are no established ways to re-purpose or minimize the waste generated in this process. Additionally, bulk order leftovers, under optimized space management, and underdeveloped knowledge sharing infrastructures are also contributing to sustainability issues in various aspects of rapid prototyping.</p>
+
+<p>This workshop aims to explore the sustainability issues linked with rapid prototyping and pinpoint HCI research paths for more sustainable “making” processes.</p>
+
+<h2 id="agenda">Agenda</h2>
+<p>The workshop will consist of keynotes, demos, hands-on building, and brainstorming sessions, divided into six distinct activities. (More details to follow!)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Activity</th>
+      <th>Time (PDT)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Opening &amp; Introduction</td>
+      <td>9:00-9:15</td>
+    </tr>
+    <tr>
+      <td>Keynotes</td>
+      <td>9:15-10:15</td>
+    </tr>
+    <tr>
+      <td>Coffee Break</td>
+      <td>10:15-10:45</td>
+    </tr>
+    <tr>
+      <td>Discussion Panel with Keynote Speakers</td>
+      <td>10:45-11:15</td>
+    </tr>
+    <tr>
+      <td>Brainstorm: Sustainability Challenges in Making</td>
+      <td>11:15-12:30</td>
+    </tr>
+    <tr>
+      <td>LUNCH BREAK</td>
+      <td>12:30-13:30</td>
+    </tr>
+    <tr>
+      <td>Collaborative Making Activity</td>
+      <td>13:30-14:30</td>
+    </tr>
+    <tr>
+      <td>Coffee Break</td>
+      <td>14:30-15:00</td>
+    </tr>
+    <tr>
+      <td>Brainstorm: Tools and Future Technologies for Sustainable Making</td>
+      <td>15:00-16:00</td>
+    </tr>
+    <tr>
+      <td>Closing &amp; Future Plans</td>
+      <td>16:00-17:00</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><span> </span></p>
+
+<h2 id="keynote-speakers">Keynote Speakers</h2>
+<p>We are excited to announce our keynote speakers to our workshop: Gregory Abowd, Eric Paulos, and Kristin Williams.</p>
+<div class="row row-cols-1 projects pt-0 pb-3">
+  <div class="card mt-4">  
+  <a href="https://coe.northeastern.edu/people/abowd-gregory/" rel="external nofollow noopener" target="_blank">  
+    <div class="card hoverable">
+      <div class="row g-0">        
+        <div class="card-img col-sm-2 col-md-2" style="margin-left:2%; margin-top:2%">
+          <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="assets/img/abowd-g.jpg"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="assets/img/abowd-g.jpg"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="assets/img/abowd-g.jpg"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="assets/img/abowd-g.jpg" width="auto" height="auto" alt="Gregory Abowd" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+        </div>
+        <div class="col-sm-6 col-md-8">        
+          <div class="card-body">
+            <h5 class="card-title text-left">Gregory Abowd</h5>
+            <h6 class="card-text text-left">Northeastern University</h6> 
+            <h6 class="card-subtitle text-body-secondary"> Abstract </h6>
+            <p class="card-text text-left">I have been speaking and writing about the idea of an Internet of Materials for nearly a decade. It started as a way to rethink Mark Weiser's vision of ubiquitous computing in a more modern context, with the same hopeful zeal that Weiser presented in his writings from the late 1980s and early 1990's.  I will summarize how that re-interpretation has inspired my work, and the work of a growing community, for nearly a decade. From those involved in the fundamental understanding of computation to those involved in the practical development and deployment of computation, the future seems bright.  We are moving towards a world of increased ubiquity of computation.  There appears to be no end in sight for the increased ubiquity of all things computational.  From a technical perspective, this is wonderful.  More recently, I have been forced to think about this vision through a different lens. When you reflect on the environmental impact of computation, and specifically the impact of how we manufacture, operate, and discard computational artifacts, there is an even more compelling reason to pursue the agenda of the Internet of Materials.  This unending proliferation of computation is dangerous to the health of our planet. We MUST begin questioning a lot of the assumptions on how to make, operate, and dispose of computational objects. This is no longer a journey for the 'visionaries' to play out their fanciful predictions for the future.  It is a mandate to address the fundamental hazards of our current trajectory towards ubiquitous computing. And I believe we can start to make strides by rethinking the goals of the maker community.</p>
+            <h6 class="card-subtitle text-body-secondary"> Bio </h6>
+            <p class="card-text text-left">Gregory D. Abowd is the Dean of the College of Engineering at Northeastern University, where he is also a Professor of Electrical and Computer Engineering with affiliate appointments in the Khoury College of Computer Sciences and the Bouvé College of Health Sciences. Prior to joining Northeastern in March 2021, Dr. Abowd was faculty in the College of Computing at the Georgia Institute of Technology for over 26 years, where he held the titles of Regents’ Professor and J.Z. Liang Endowed Chair in the School in Interactive Computing. His research falls largely in the area of Human-Computer Interaction with an emphasis on applications and technology development for mobile and ubiquitous computing in everyday settings. His research has introduced innovations in the classroom, the home, for stakeholders connected with autism, and sustainable forms of computing in everyday life. He has been the founding Editor-in-Chief for two major journals and is the most highly cited researcher in HCI and ubiquitous computing in the world, according to csrankings.org (the second two are both his former PhD students). Dr. Abowd is a Fellow of the ACM and an elected member of the ACM SIGCHI Academy. He was a 2009 recipient of the ACM Eugene Lawler Humanitarian Contributions within Computer Science and Informatics.  Dr. Abowd received the 2023 Lifetime Achievement Award for Research from ACM SIGCHI.  He earned his Bachelor of Science in Honors Mathematics (summa cum laude) from the University of Notre Dame in 1986 as well as a Master of Science (1987) and Doctor of Philosophy (1991) in Computation from the University of Oxford, where he attended as a Rhodes Scholar.</p>                                                 
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div> 
+  
+  <div class="card mt-4">  
+  <a href="http://www.paulos.net/" rel="external nofollow noopener" target="_blank">  
+    <div class="card hoverable">
+      <div class="row g-0">        
+        <div class="card-img col-sm-2 col-md-2" style="margin-left:2%; margin-top:2%">
+          <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="assets/img/paulos2.jpg"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="assets/img/paulos2.jpg"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="assets/img/paulos2.jpg"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="assets/img/paulos2.png" width="auto" height="auto" alt="Eric Paulos" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+        </div>
+        <div class="col-sm-6 col-md-8">        
+          <div class="card-body">
+            <h5 class="card-title text-left">Eric Paulos</h5>
+            <h6 class="card-text text-left">UC Berkeley</h6> 
+            <h6 class="card-subtitle text-body-secondary"> Abstract </h6>
+            <p class="card-text text-left">The access and growing ubiquity of digital fabrication has ushered in a celebration of creativity and 'making'. However, the focus is often on the resulting static artifact or the creative process and tools to design it. In this talk, I describe a post-making process that extends past these final static objects — not just in their making but in their 'unmaking'. By drawing from artistic movements such as Auto-Destructive Art, intentionally inverting well-established engineering principles of structurally sound designs, and safely misusing unstable materials, this talk will demonstrate an important extension to making — unmaking. Unmaking allows designs to change over time, is an ally to sustainability and re-usability, and captures themes of 'aura', emotionality, and personalization. I will also describe an exploration into the design of novel interactive electronic systems that leverage sustainable materials that are both dynamic and entirely decomposable.</p>
+            <h6 class="card-subtitle text-body-secondary"> Bio </h6>
+            <p class="card-text text-left">Eric Paulos is the founder and director of the Hybrid Ecologies Lab, a Professor in Electrical Engineering Computer Science Department at UC Berkeley, Director of the Jacobs Institute for Design Innovation, Director of the CITRIS Invention Lab, a Co-Director of the Swarm Lab, and faculty within the Berkeley Center for New Media (BCNM). Eric developed some of the first internet telepresence robots in the early 1990s, one of the first smartwatch haptic messaging devices in 2002, coined the term 'Urban Computing' in 2004, created the first citizen science air quality sensors integrated into mobile phones in 2007, and created 'counterfuntional design' and 'unmaking' as major research themes within HCI and Design. Previously, Eric held the Cooper-Siegel Associate Professor Chair in the School of Computer Science at Carnegie Mellon University where he was faculty within the Human-Computer Interaction Institute with courtesy faculty appointment in the Robotics Institute. Prior to CMU, Eric was a Senior Research Scientist at Intel Research. Eric received his Ph.D. in Electrical Engineering and Computer Science from UC Berkeley. Eric is also the founder and director of the Experimental Interaction Unit and a frequent collaborator with Mark Pauline of Survival Research Laboratories.</p>                                                 
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+  <div class="card mt-4">  
+  <a href="https://www.cs.emory.edu/~kwil271/" rel="external nofollow noopener" target="_blank">  
+    <div class="card hoverable">
+      <div class="row g-0">        
+        <div class="card-img col-sm-2 col-md-2" style="margin-left:2%; margin-top:2%">
+          <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="assets/img/williams-003.jpg"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="assets/img/williams-003.jpg"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="assets/img/williams-003.jpg"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="assets/img/williams-003.jpg" width="auto" height="auto" alt="Kristin Williams" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+        </div>
+        <div class="col-sm-6 col-md-8">        
+          <div class="card-body">
+            <h5 class="card-title text-left">Kristin Williams</h5>
+            <h6 class="card-text text-left">Emory University</h6> 
+            <h6 class="card-subtitle text-body-secondary"> Abstract </h6>
+            <p class="card-text text-left">I research how we can make programming cutting-edge technologies so approachable anyone could imbue them with their own meanings and ways of life. Today, small groups use their material environment to organize and manage daily life in idiosyncratic ways that resist generalization. To fit its context, the Internet of Things (IoT) will need to be customizable, accessible, and sustainable. I work alongside communities to design, prototype, and develop this kind of IoT in a way that considers: How can IoT customization enable creative expression? How can lightweight design support approachable and accessible forms? How can IoT be sustainable for both the environment and the communities that adopt it?</p>
+            <h6 class="card-subtitle text-body-secondary"> Bio </h6>
+            <p class="card-text text-left">Kristin Williams is an Assistant Professor of Computer Science in Emory University's College of Arts and Sciences. Her research focuses on making programming the Internet of Things approachable to casual end user programmers. This work builds on Kristin's longstanding interests in agency, DIY publishing, and access to information. In the past, Kristin has worked closely with community organizations to shape and evaluate assistive technologies for individuals with visual and cognitive disabilities, managed an archive of Soviet dissident literature on the political abuse of psychiatry, and created a 10+ year book project on Central Asian civil society as a Peace Corps volunteer in Kazakhstan. She has a PhD from Carnegie Mellon University's Human Compter Interaction Institute, an MS in Human-Computer Interaction from both Carnegie Mellon University and the University of Maryland, College Park and a BA in Philosophy from Reed College.  She was a 2021 EECS Rising Star, an NSF EAPSI Fellow, and an AAUW Career Development Grantee.</p>                                                 
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+</div>
+
+<h2 id="organizers">Organizers</h2>
+<div class="row row-cols-2 projects pt-3 pb-3">
+  <div class="card-item col">  
+  <a href="https://www.zeyuyan.com/" rel="external nofollow noopener" target="_blank">  
+    <div class="card hoverable">
+      <div class="row g-0">        
+        <div class="card-img col-sm-4" style="margin-left:2%; margin-top:2%">
+          <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="assets/img/zeyu.jpg"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="assets/img/zeyu.jpg"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="assets/img/zeyu.jpg"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="assets/img/zeyu.jpg" width="auto" height="auto" alt="Zeyu Yan" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+        </div>
+        <div class="col-sm-6">        
+          <div class="card-body">
+            <h5 class="card-title text-right">Zeyu Yan</h5>
+            <p class="card-text text-right">University of Maryland</p>                                                  
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+  <div class="card-item col">  
+  <a href="https://tingyucheng.com/" rel="external nofollow noopener" target="_blank">  
+    <div class="card hoverable">
+      <div class="row g-0">        
+        <div class="card-img col-sm-4" style="margin-left:2%; margin-top:2%">
+          <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="assets/img/tingyu.jpg"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="assets/img/tingyu.jpg"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="assets/img/tingyu.jpg"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="assets/img/tingyu.jpg" width="auto" height="auto" alt="Tingyu Cheng" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+        </div>
+        <div class="col-sm-6">        
+          <div class="card-body">
+            <h5 class="card-title text-right">Tingyu Cheng</h5>
+            <p class="card-text text-right">Georgia Institute of Technology</p>                                                  
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+  <div class="card-item col">  
+  <a href="https://jasminelu.site/" rel="external nofollow noopener" target="_blank">  
+    <div class="card hoverable">
+      <div class="row g-0">        
+        <div class="card-img col-sm-4" style="margin-left:2%; margin-top:2%">
+          <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="assets/img/jasmine.jpg"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="assets/img/jasmine.jpg"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="assets/img/jasmine.jpg"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="assets/img/jasmine.jpg" width="auto" height="auto" alt="Jasmine Lu" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+        </div>
+        <div class="col-sm-6">        
+          <div class="card-body">
+            <h5 class="card-title text-right">Jasmine Lu</h5>
+            <p class="card-text text-right">University of Chicago</p>                                                  
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+  <div class="card-item col">  
+  <a href="https://plopes.org/" rel="external nofollow noopener" target="_blank">  
+    <div class="card hoverable">
+      <div class="row g-0">        
+        <div class="card-img col-sm-4" style="margin-left:2%; margin-top:2%">
+          <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="assets/img/pedro.jpg"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="assets/img/pedro.jpg"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="assets/img/pedro.jpg"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="assets/img/pedro.png" width="auto" height="auto" alt="Pedro Lopes" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+        </div>
+        <div class="col-sm-6">        
+          <div class="card-body">
+            <h5 class="card-title text-right">Pedro Lopes</h5>
+            <p class="card-text text-right">University of Chicago</p>                                                  
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+  <div class="card-item col">  
+  <a href="http://www.huaishu.me/" rel="external nofollow noopener" target="_blank">  
+    <div class="card hoverable">
+      <div class="row g-0">        
+        <div class="card-img col-sm-4" style="margin-left:2%; margin-top:2%">
+          <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="assets/img/huaishu.jpg"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="assets/img/huaishu.jpg"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="assets/img/huaishu.jpg"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="assets/img/huaishu.jpg" width="auto" height="auto" alt="Huaishu Peng" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+        </div>
+        <div class="col-sm-6">        
+          <div class="card-body">
+            <h5 class="card-title text-right">Huaishu Peng</h5>
+            <p class="card-text text-right">University of Maryland</p>                                                  
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+</div>
+
+<h4 id="suggested-readings-on-sustainable-making">Suggested Readings on Sustainable Making</h4>
+
+<ul>
+  <li>Jasmine Lu, Beza Desta, K.D. Wu, Romain Nith, Joyce Passananti, and Pedro Lopes. 2023. ecoEDA: Recycling E-waste During Electronics Design. In Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology (San Francisco, CA, USA) (UIST ’23).</li>
+  <li>Tingyu Cheng, Taylor Tabb, Jung Wook Park, Eric M Gallo, Aditi Maheshwari, Gregory D. Abowd, Hyunjoo Oh, and Andreea Danielescu. 2023. Functional Destruction: Utilizing Sustainable Materials’ Physical Transiency for Electronics Applications. In Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems (CHI ‘23). Association for Computing Machinery, New York, NY, USA, Article 366, 1–16. https://doi.org/10.1145/3544548.3580811</li>
+  <li>Michael L. Rivera, S. Sandra Bae, and Scott E. Hudson. 2023. Designing a Sustainable Material for 3D Printing with Spent Coffee Grounds. In Proceedings of the 2023 ACM Designing Interactive Systems Conference (DIS ‘23). Association for Computing Machinery, New York, NY, USA, 294–311. https://doi.org/10.1145/3563657.3595983</li>
+  <li>Marion Koelle, Madalina Nicolae, Aditya Shekhar Nittala, Marc Teyssier, and Jürgen Steimle. 2022. Prototyping Soft Devices with Interactive Bioplastics. In Proceedings of the 35th Annual ACM Symposium on User Interface Software and Technology (UIST ‘22). Association for Computing Machinery, New York, NY, USA, Article 19, 1–16. https://doi.org/10.1145/3526113.3545623</li>
+  <li>Nivedita Arora, Vikram Iyer, Hyunjoo Oh, Gregory D. Abowd, and Josiah D. Hester. 2023. Circularity in Energy Harvesting Computational “Things”. In Proceedings of the 20th ACM Conference on Embedded Networked Sensor Systems (SenSys ‘22). Association for Computing Machinery, New York, NY, USA, 931–933. https://doi.org/10.1145/3560905.3568106</li>
+  <li>Ilan Mandel and Wendy Ju. 2023. Recapturing Product as Material Supply: Hover-boards as Garbatrage. In Proceedings of the 2023 ACM Designing Interactive Systems Conference (Pittsburgh, PA, USA) (DIS ’23). Association for Computing Machinery, New York, NY, USA, 564–579. https://doi.org/10.1145/3563657.3596128</li>
+  <li>Katherine W Song, Aditi Maheshwari, Eric M Gallo, Andreea Danielescu, and Eric Paulos. 2022. Towards Decomposable Interactive Systems: Design of a Backyard-Degradable Wireless Heating Interface. In Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems (New Orleans, LA, USA) (CHI ’22). Association for Computing Machinery, New York, NY, USA, Article 100, 12 pages. https://doi.org/10.1145/3491102.3502007</li>
+  <li>Katherine Wei Song and Eric Paulos. 2023. Vim: Customizable, Decomposable Electrical Energy Storage. In Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems (Hamburg, Germany) (CHI ’23). Association for Computing Machinery, New York, NY, USA, Article 180, 18 pages. https://doi. org/10.1145/3544548.3581110</li>
+  <li>Ludwig Wilhelm Wall, Alec Jacobson, Daniel Vogel, and Oliver Schneider. 2021. Scrappy: Using scrap material as infill to make fabrication more sustainable. Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems (2021). https://doi.org/10.1145/3411764.3445187</li>
+  <li>Shanel Wu and Laura Devendorf. 2020. Unfabricate: Designing Smart Textiles for Disassembly. In Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems (Honolulu, HI, USA) (CHI ’20). Association for Computing Machinery, New York, NY, USA, 1–14. https://doi.org/10.1145/3313831.3376227</li>
+  <li>Eldy S Lazaro Vasquez, Hao-Chuan Wang, and Katia Vega. 2020. Introducing the sustainable prototyping life cycle for digital fabrication to designers. In Proceedings of the 2020 ACM Designing Interactive Systems Conference. 1301–1312.</li>
+  <li>Sunyoung Kim and Eric Paulos. 2011. Practices in the Creative Reuse of E-Waste. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (Vancouver, BC, Canada) (CHI ’11). Association for Computing Machinery, New York, NY, USA, 2395–2404. https://doi.org/10.1145/1978942.1979292</li>
+  <li>Ollie Hanton, Zichao Shen, Mike Fraser, and Anne Roudaut. 2022. FabricatINK: Personal Fabrication of Bespoke Displays Using Electronic Ink from Upcycled E Readers. In Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems (New Orleans, LA, USA) (CHI ’22). https://doi.org/10.1145/3491102.3501844</li>
+  <li>Eli Blevis. 2007. Sustainable interaction design: invention &amp; disposal, renewal &amp; reuse. In Proceedings of the SIGCHI conference on Human factors in computing systems. 503–512.}</li>
+</ul>
+
+<p>* <i>Many more papers exist, not just in HCI, but also outside the traditional boundaries of interactive work, and this list is meant to inspire you to read these, search more, and engage with this topic.</i></p>
+
+<h2 id="questions">Questions?</h2>
+<p>Feel free to e-mail <a href="mailto:zeyuy@umd.edu">us</a>.</p>
+
+<!-- 
+Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+
+Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+ -->
+
+          </div>
+
+          <!-- News -->
+          
+
+          <!-- Latest posts -->
+          
+
+          <!-- Selected papers -->
+          
+
+          <!-- Social -->
+        </article>
+
+</div>
+
+      
+    </div>
+
+    <!-- Footer -->    
+    <footer class="fixed-bottom">
+      <div class="container mt-0">
+        © Copyright 2024 Future Paradigms for Sustainable Making. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
+
+      </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script defer src="assets/js/masonry.js" type="text/javascript"></script>
+    
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script defer src="assets/js/zoom.js"></script>
+
+  <!-- Bootstrap Table -->
+  <script defer src="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.js"></script>
+
+  <!-- Load Common JS -->
+  <script src="assets/js/no_defer.js?d633890033921b33e0ceb13d22340a9c"></script>
+  <script defer src="assets/js/common.js?acdb9690d7641b2f8d40529018c71a01"></script>
+  <script defer src="assets/js/copy_code.js?c9d9dd48933de3831b3ee5ec9c209cac" type="text/javascript"></script>
+
+    
+  <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  <script async src="https://badge.dimensions.ai/badge.js"></script>
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    
+    
+
+<!-- Scrolling Progress Bar -->
+<script type="text/javascript">
+  /*
+   * This JavaScript code has been adapted from the article 
+   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
+   * published on the website https://css-tricks.com on the 7th of May, 2014.
+   * Couple of changes were made to the original code to make it compatible 
+   * with the `al-foio` theme.
+   */
+  const progressBar = $("#progress");
+  /*
+   * We set up the bar after all elements are done loading.
+   * In some cases, if the images in the page are larger than the intended
+   * size they'll have on the page, they'll be resized via CSS to accomodate
+   * the desired size. This mistake, however, breaks the computations as the
+   * scroll size is computed as soon as the elements finish loading.
+   * To account for this, a minimal delay was introduced before computing the
+   * values.
+   */
+  window.onload = function () {
+    setTimeout(progressBarSetup, 50);
+  };
+  /*
+   * We set up the bar according to the browser.
+   * If the browser supports the progress element we use that.
+   * Otherwise, we resize the bar thru CSS styling
+   */
+  function progressBarSetup() {
+    if ("max" in document.createElement("progress")) {
+      initializeProgressElement();
+      $(document).on("scroll", function() {
+        progressBar.attr({ value: getCurrentScrollPosition() });
+      });
+      $(window).on("resize", initializeProgressElement);
+    } else {
+      resizeProgressBar();
+      $(document).on("scroll", resizeProgressBar);
+      $(window).on("resize", resizeProgressBar);
+    }
+  }
+  /*
+   * The vertical scroll position is the same as the number of pixels that
+   * are hidden from view above the scrollable area. Thus, a value > 0 is
+   * how much the user has scrolled from the top
+   */
+  function getCurrentScrollPosition() {
+    return $(window).scrollTop();
+  }
+
+  function initializeProgressElement() {
+    let navbarHeight = $("#navbar").outerHeight(true);
+    $("body").css({ "padding-top": navbarHeight });
+    $("progress-container").css({ "padding-top": navbarHeight });
+    progressBar.css({ top: navbarHeight });
+    progressBar.attr({
+      max: getDistanceToScroll(),
+      value: getCurrentScrollPosition(),
+    });
+  }
+  /*
+   * The offset between the html document height and the browser viewport
+   * height will be greater than zero if vertical scroll is possible.
+   * This is the distance the user can scroll
+   */
+  function getDistanceToScroll() {
+    return $(document).height() - $(window).height();
+  }
+
+  function resizeProgressBar() {
+    progressBar.css({ width: getWidthPercentage() + "%" });
+  }
+  // The scroll ratio equals the percentage to resize the bar
+  function getWidthPercentage() {
+    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
+  }
+</script>
+
+  </body>
+</html>
